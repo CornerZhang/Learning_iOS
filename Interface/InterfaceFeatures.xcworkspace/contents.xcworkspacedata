@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:UIButton_test/UIButton_test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TableView_swipe/TableView_swipe.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TableView_plist/TableView_plist.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PagedUITestApp/PagedUITestApp.xcodeproj">
+   </FileRef>
+</Workspace>
