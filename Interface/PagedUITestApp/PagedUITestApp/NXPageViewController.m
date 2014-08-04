@@ -39,6 +39,12 @@
     // 给pageViewController设置dataSource
     self.dataSource = self.modelController;
 
+    CGRect pageViewRect = self.view.bounds;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {	// for iPad
+        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    }
+    self.view.frame = pageViewRect;
+
     // 创建初始的第一页
     NXContentViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
@@ -71,21 +77,22 @@
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController
                    spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
 {
-    // Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller.
-    // Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES,
-    // so set it to NO here.
-    
-    // UIViewController *currentViewController = self.viewControllers[0];
-    NSArray *viewControllers = self.viewControllers; //@[currentViewController];
-    
-    [self setViewControllers:viewControllers
-                   direction:UIPageViewControllerNavigationDirectionForward
-                    animated:YES
-                  completion:nil];
-    
-    NSLog(@"spineLocationForInterfaceOrientation -- %@",NSStringFromSelector(_cmd));
-    
-    self.doubleSided = NO;
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        // In portrait orientation or on iPhone: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
+        
+        NSArray *viewControllers = self.viewControllers;
+        
+        [self setViewControllers:viewControllers
+                       direction:UIPageViewControllerNavigationDirectionForward
+                        animated:YES
+                      completion:nil];
+        
+        NSLog(@"spineLocationForInterfaceOrientation -- %@",NSStringFromSelector(_cmd));
+        
+        self.doubleSided = NO;
+
+    }
+
     return UIPageViewControllerSpineLocationMin;
 }
 

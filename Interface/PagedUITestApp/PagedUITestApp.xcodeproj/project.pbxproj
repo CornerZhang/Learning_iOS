@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65071ABA197B64D00099E814 /* GroupList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65071AB8197B64D00099E814 /* GroupList.xcdatamodeld */; };
-		65071AC3197B670A0099E814 /* Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 65071AC2197B670A0099E814 /* Items.m */; };
-		65071AC6197B670B0099E814 /* PageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 65071AC5197B670B0099E814 /* PageGroup.m */; };
 		656F69C7196F857100493777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656F69C6196F857100493777 /* Foundation.framework */; };
 		656F69C9196F857100493777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656F69C8196F857100493777 /* CoreGraphics.framework */; };
 		656F69CB196F857100493777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656F69CA196F857100493777 /* UIKit.framework */; };
@@ -40,11 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65071AB9197B64D00099E814 /* GroupList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroupList.xcdatamodel; sourceTree = "<group>"; };
-		65071AC1197B670A0099E814 /* Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Items.h; sourceTree = "<group>"; };
-		65071AC2197B670A0099E814 /* Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Items.m; sourceTree = "<group>"; };
-		65071AC4197B670B0099E814 /* PageGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageGroup.h; sourceTree = "<group>"; };
-		65071AC5197B670B0099E814 /* PageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageGroup.m; sourceTree = "<group>"; };
 		656F69C3196F857100493777 /* PagedUITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagedUITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F69C6196F857100493777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		656F69C8196F857100493777 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,11 +126,6 @@
 				656F6A01196F85B400493777 /* NXModelController.m */,
 				656F6A02196F85B400493777 /* NXPageViewController.h */,
 				656F6A03196F85B400493777 /* NXPageViewController.m */,
-				65071AC1197B670A0099E814 /* Items.h */,
-				65071AC2197B670A0099E814 /* Items.m */,
-				65071AC4197B670B0099E814 /* PageGroup.h */,
-				65071AC5197B670B0099E814 /* PageGroup.m */,
-				65071AB8197B64D00099E814 /* GroupList.xcdatamodeld */,
 				656F69D5196F857100493777 /* NXAppDelegate.h */,
 				656F69D6196F857100493777 /* NXAppDelegate.m */,
 				656F69D8196F857100493777 /* Main_iPhone.storyboard */,
@@ -277,12 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65071AC6197B670B0099E814 /* PageGroup.m in Sources */,
 				656F6A04196F85B400493777 /* NXContentViewController.m in Sources */,
 				656F6A05196F85B400493777 /* NXModelController.m in Sources */,
 				656F69D7196F857100493777 /* NXAppDelegate.m in Sources */,
-				65071ABA197B64D00099E814 /* GroupList.xcdatamodeld in Sources */,
-				65071AC3197B670A0099E814 /* Items.m in Sources */,
 				656F69D3196F857100493777 /* main.m in Sources */,
 				656F6A06196F85B400493777 /* NXPageViewController.m in Sources */,
 			);
@@ -511,19 +495,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		65071AB8197B64D00099E814 /* GroupList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				65071AB9197B64D00099E814 /* GroupList.xcdatamodel */,
-			);
-			currentVersion = 65071AB9197B64D00099E814 /* GroupList.xcdatamodel */;
-			path = GroupList.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 656F69BB196F857100493777 /* Project object */;
 }

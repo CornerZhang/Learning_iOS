@@ -31,7 +31,7 @@
         _contentPageViews = [[NSMutableArray alloc] init];
         for (int i=0; i<_monthNames.count; ++i) {
             const NXPageRecord* pageRecord = [[NXPageRecord alloc] init];
-            [_contentPageViews addObject:pageRecord];
+            [_contentPageViews addObject:pageRecord];	// NSArray内不能放nil对象指针
         }
         NSLog(@"pages count %d", [_contentPageViews count]);
     }
@@ -52,7 +52,6 @@
         
         // 设置页名称
         contentViewController.monthName = self.monthNames[index];
-        //[_contentPageViews insertObject:contentViewController atIndex:index];
         
 		pageRecord.pageView = contentViewController;
         pageRecord.used = YES;
@@ -64,17 +63,15 @@
 }
 
 - (NSUInteger)indexOfViewController:(NXContentViewController *)viewController {
-    NXContentViewController* found = nil;
-    NSUInteger c = 0;
-    for (NXPageRecord* pageRecord in _contentPageViews) {
-        if (pageRecord.pageView == viewController) {
-            found = viewController;
-            break;
+    BOOL (^condition)(NXPageRecord* , NSUInteger , BOOL *) = ^(NXPageRecord* obj, NSUInteger idx, BOOL *stop)
+    {
+        if (obj.pageView == viewController) {
+            return YES;
         }
-        ++c;
-    }
+        return NO;
+    };
     
-    return c;
+    return [_contentPageViews indexOfObjectPassingTest:condition];
 }
 
 #pragma mark - Page View Controller Data Source
