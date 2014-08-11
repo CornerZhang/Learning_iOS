@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PageCornerCurl/PageCornerCurl.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UIButton_test/UIButton_test.xcodeproj">
    </FileRef>
    <FileRef
