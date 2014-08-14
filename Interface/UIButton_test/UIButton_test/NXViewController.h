@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NXViewController : UIViewController
+- (IBAction)tapOnBack:(UITapGestureRecognizer *)sender;
 
 @end
