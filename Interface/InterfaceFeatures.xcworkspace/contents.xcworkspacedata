@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UITextField_demo/UITextField_demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TableViewToDetails/TableViewToDetails.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PopoverDemo_iPad/PopoverDemo_iPad.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PopoverController_iPhone/PopoverController_iPhone.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PageCornerCurl/PageCornerCurl.xcodeproj">
    </FileRef>
    <FileRef
