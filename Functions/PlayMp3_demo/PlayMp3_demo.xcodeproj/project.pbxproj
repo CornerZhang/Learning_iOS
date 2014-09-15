@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		650B6B2319C56D8000DBCB77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B2219C56D8000DBCB77 /* Foundation.framework */; };
+		650B6B2519C56D8000DBCB77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B2419C56D8000DBCB77 /* CoreGraphics.framework */; };
+		650B6B2719C56D8000DBCB77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B2619C56D8000DBCB77 /* UIKit.framework */; };
+		650B6B2D19C56D8100DBCB77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B6B2B19C56D8100DBCB77 /* InfoPlist.strings */; };
+		650B6B2F19C56D8200DBCB77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B6B2E19C56D8200DBCB77 /* main.m */; };
+		650B6B3319C56D8200DBCB77 /* NXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B6B3219C56D8200DBCB77 /* NXAppDelegate.m */; };
+		650B6B3619C56D8200DBCB77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650B6B3419C56D8200DBCB77 /* Main.storyboard */; };
+		650B6B3919C56D8200DBCB77 /* NXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B6B3819C56D8200DBCB77 /* NXViewController.m */; };
+		650B6B3B19C56D8200DBCB77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650B6B3A19C56D8200DBCB77 /* Images.xcassets */; };
+		650B6B4219C56D8200DBCB77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B4119C56D8200DBCB77 /* XCTest.framework */; };
+		650B6B4319C56D8200DBCB77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B2219C56D8000DBCB77 /* Foundation.framework */; };
+		650B6B4419C56D8200DBCB77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B6B2619C56D8000DBCB77 /* UIKit.framework */; };
+		650B6B4C19C56D8200DBCB77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B6B4A19C56D8200DBCB77 /* InfoPlist.strings */; };
+		650B6B4E19C56D8200DBCB77 /* PlayMp3_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B6B4D19C56D8200DBCB77 /* PlayMp3_demoTests.m */; };
+		650B6B5819C56DDA00DBCB77 /* Babbling_Brook.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 650B6B5719C56DDA00DBCB77 /* Babbling_Brook.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		650B6B4519C56D8200DBCB77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650B6B1719C56D7F00DBCB77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 650B6B1E19C56D8000DBCB77;
+			remoteInfo = PlayMp3_demo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		650B6B1F19C56D8000DBCB77 /* PlayMp3_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayMp3_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		650B6B2219C56D8000DBCB77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		650B6B2419C56D8000DBCB77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		650B6B2619C56D8000DBCB77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		650B6B2A19C56D8100DBCB77 /* PlayMp3_demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayMp3_demo-Info.plist"; sourceTree = "<group>"; };
+		650B6B2C19C56D8100DBCB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		650B6B2E19C56D8200DBCB77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		650B6B3019C56D8200DBCB77 /* PlayMp3_demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayMp3_demo-Prefix.pch"; sourceTree = "<group>"; };
+		650B6B3119C56D8200DBCB77 /* NXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXAppDelegate.h; sourceTree = "<group>"; };
+		650B6B3219C56D8200DBCB77 /* NXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXAppDelegate.m; sourceTree = "<group>"; };
+		650B6B3519C56D8200DBCB77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		650B6B3719C56D8200DBCB77 /* NXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXViewController.h; sourceTree = "<group>"; };
+		650B6B3819C56D8200DBCB77 /* NXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXViewController.m; sourceTree = "<group>"; };
+		650B6B3A19C56D8200DBCB77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		650B6B4019C56D8200DBCB77 /* PlayMp3_demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayMp3_demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650B6B4119C56D8200DBCB77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		650B6B4919C56D8200DBCB77 /* PlayMp3_demoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayMp3_demoTests-Info.plist"; sourceTree = "<group>"; };
+		650B6B4B19C56D8200DBCB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		650B6B4D19C56D8200DBCB77 /* PlayMp3_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayMp3_demoTests.m; sourceTree = "<group>"; };
+		650B6B5719C56DDA00DBCB77 /* Babbling_Brook.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Babbling_Brook.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		650B6B1C19C56D8000DBCB77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B2519C56D8000DBCB77 /* CoreGraphics.framework in Frameworks */,
+				650B6B2719C56D8000DBCB77 /* UIKit.framework in Frameworks */,
+				650B6B2319C56D8000DBCB77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B6B3D19C56D8200DBCB77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B4219C56D8200DBCB77 /* XCTest.framework in Frameworks */,
+				650B6B4419C56D8200DBCB77 /* UIKit.framework in Frameworks */,
+				650B6B4319C56D8200DBCB77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		650B6B1619C56D7F00DBCB77 = {
+			isa = PBXGroup;
+			children = (
+				650B6B2819C56D8000DBCB77 /* PlayMp3_demo */,
+				650B6B4719C56D8200DBCB77 /* PlayMp3_demoTests */,
+				650B6B2119C56D8000DBCB77 /* Frameworks */,
+				650B6B2019C56D8000DBCB77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		650B6B2019C56D8000DBCB77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B1F19C56D8000DBCB77 /* PlayMp3_demo.app */,
+				650B6B4019C56D8200DBCB77 /* PlayMp3_demoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		650B6B2119C56D8000DBCB77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B2219C56D8000DBCB77 /* Foundation.framework */,
+				650B6B2419C56D8000DBCB77 /* CoreGraphics.framework */,
+				650B6B2619C56D8000DBCB77 /* UIKit.framework */,
+				650B6B4119C56D8200DBCB77 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650B6B2819C56D8000DBCB77 /* PlayMp3_demo */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B5719C56DDA00DBCB77 /* Babbling_Brook.mp3 */,
+				650B6B3119C56D8200DBCB77 /* NXAppDelegate.h */,
+				650B6B3219C56D8200DBCB77 /* NXAppDelegate.m */,
+				650B6B3419C56D8200DBCB77 /* Main.storyboard */,
+				650B6B3719C56D8200DBCB77 /* NXViewController.h */,
+				650B6B3819C56D8200DBCB77 /* NXViewController.m */,
+				650B6B3A19C56D8200DBCB77 /* Images.xcassets */,
+				650B6B2919C56D8100DBCB77 /* Supporting Files */,
+			);
+			path = PlayMp3_demo;
+			sourceTree = "<group>";
+		};
+		650B6B2919C56D8100DBCB77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B2A19C56D8100DBCB77 /* PlayMp3_demo-Info.plist */,
+				650B6B2B19C56D8100DBCB77 /* InfoPlist.strings */,
+				650B6B2E19C56D8200DBCB77 /* main.m */,
+				650B6B3019C56D8200DBCB77 /* PlayMp3_demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		650B6B4719C56D8200DBCB77 /* PlayMp3_demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B4D19C56D8200DBCB77 /* PlayMp3_demoTests.m */,
+				650B6B4819C56D8200DBCB77 /* Supporting Files */,
+			);
+			path = PlayMp3_demoTests;
+			sourceTree = "<group>";
+		};
+		650B6B4819C56D8200DBCB77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				650B6B4919C56D8200DBCB77 /* PlayMp3_demoTests-Info.plist */,
+				650B6B4A19C56D8200DBCB77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		650B6B1E19C56D8000DBCB77 /* PlayMp3_demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650B6B5119C56D8200DBCB77 /* Build configuration list for PBXNativeTarget "PlayMp3_demo" */;
+			buildPhases = (
+				650B6B1B19C56D8000DBCB77 /* Sources */,
+				650B6B1C19C56D8000DBCB77 /* Frameworks */,
+				650B6B1D19C56D8000DBCB77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayMp3_demo;
+			productName = PlayMp3_demo;
+			productReference = 650B6B1F19C56D8000DBCB77 /* PlayMp3_demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		650B6B3F19C56D8200DBCB77 /* PlayMp3_demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650B6B5419C56D8200DBCB77 /* Build configuration list for PBXNativeTarget "PlayMp3_demoTests" */;
+			buildPhases = (
+				650B6B3C19C56D8200DBCB77 /* Sources */,
+				650B6B3D19C56D8200DBCB77 /* Frameworks */,
+				650B6B3E19C56D8200DBCB77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650B6B4619C56D8200DBCB77 /* PBXTargetDependency */,
+			);
+			name = PlayMp3_demoTests;
+			productName = PlayMp3_demoTests;
+			productReference = 650B6B4019C56D8200DBCB77 /* PlayMp3_demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		650B6B1719C56D7F00DBCB77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = NeXtreme.com;
+				TargetAttributes = {
+					650B6B3F19C56D8200DBCB77 = {
+						TestTargetID = 650B6B1E19C56D8000DBCB77;
+					};
+				};
+			};
+			buildConfigurationList = 650B6B1A19C56D7F00DBCB77 /* Build configuration list for PBXProject "PlayMp3_demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 650B6B1619C56D7F00DBCB77;
+			productRefGroup = 650B6B2019C56D8000DBCB77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				650B6B1E19C56D8000DBCB77 /* PlayMp3_demo */,
+				650B6B3F19C56D8200DBCB77 /* PlayMp3_demoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		650B6B1D19C56D8000DBCB77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B3B19C56D8200DBCB77 /* Images.xcassets in Resources */,
+				650B6B5819C56DDA00DBCB77 /* Babbling_Brook.mp3 in Resources */,
+				650B6B2D19C56D8100DBCB77 /* InfoPlist.strings in Resources */,
+				650B6B3619C56D8200DBCB77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B6B3E19C56D8200DBCB77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B4C19C56D8200DBCB77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		650B6B1B19C56D8000DBCB77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B3319C56D8200DBCB77 /* NXAppDelegate.m in Sources */,
+				650B6B2F19C56D8200DBCB77 /* main.m in Sources */,
+				650B6B3919C56D8200DBCB77 /* NXViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B6B3C19C56D8200DBCB77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B6B4E19C56D8200DBCB77 /* PlayMp3_demoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		650B6B4619C56D8200DBCB77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 650B6B1E19C56D8000DBCB77 /* PlayMp3_demo */;
+			targetProxy = 650B6B4519C56D8200DBCB77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		650B6B2B19C56D8100DBCB77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650B6B2C19C56D8100DBCB77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		650B6B3419C56D8200DBCB77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650B6B3519C56D8200DBCB77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		650B6B4A19C56D8200DBCB77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650B6B4B19C56D8200DBCB77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		650B6B4F19C56D8200DBCB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		650B6B5019C56D8200DBCB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		650B6B5219C56D8200DBCB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3_demo/PlayMp3_demo-Prefix.pch";
+				INFOPLIST_FILE = "PlayMp3_demo/PlayMp3_demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		650B6B5319C56D8200DBCB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3_demo/PlayMp3_demo-Prefix.pch";
+				INFOPLIST_FILE = "PlayMp3_demo/PlayMp3_demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		650B6B5519C56D8200DBCB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayMp3_demo.app/PlayMp3_demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3_demo/PlayMp3_demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PlayMp3_demoTests/PlayMp3_demoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		650B6B5619C56D8200DBCB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayMp3_demo.app/PlayMp3_demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3_demo/PlayMp3_demo-Prefix.pch";
+				INFOPLIST_FILE = "PlayMp3_demoTests/PlayMp3_demoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650B6B1A19C56D7F00DBCB77 /* Build configuration list for PBXProject "PlayMp3_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B6B4F19C56D8200DBCB77 /* Debug */,
+				650B6B5019C56D8200DBCB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650B6B5119C56D8200DBCB77 /* Build configuration list for PBXNativeTarget "PlayMp3_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B6B5219C56D8200DBCB77 /* Debug */,
+				650B6B5319C56D8200DBCB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		650B6B5419C56D8200DBCB77 /* Build configuration list for PBXNativeTarget "PlayMp3_demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B6B5519C56D8200DBCB77 /* Debug */,
+				650B6B5619C56D8200DBCB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 650B6B1719C56D7F00DBCB77 /* Project object */;
+}
