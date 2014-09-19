@@ -11,14 +11,20 @@
 
 #define DEBUG 1
 
+#define CELL_PAN_WIDTH 44
+
 typedef enum panStyle_e {
     PanStyle_Left,
-    PanStyle_Right
+    PanStyle_LeftToggle,
+    PanStyle_Right,
+    PanStyle_RightToggle
 } panStyle_t;
 
 @interface NXTableViewCell () {
 	BOOL animating;
 	panStyle_t panStyle;
+    BOOL beMarked;
+    BOOL beClocked;
 }
 
 @end
@@ -26,6 +32,8 @@ typedef enum panStyle_e {
 @implementation NXTableViewCell
 @synthesize foregroundView;
 @synthesize backgroundView;
+@synthesize markView;
+@synthesize clockView;
 @synthesize foregroundCenter;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -42,6 +50,11 @@ typedef enum panStyle_e {
         [self.contentView addGestureRecognizer:panGesture];
 
         animating = NO;
+        beMarked = NO;
+        beClocked = NO;
+        
+        markView.alpha = 0;
+        clockView.alpha = 0;
     }
     return self;
 }
@@ -74,15 +87,25 @@ typedef enum panStyle_e {
             CGPoint translation = [gesture translationInView:foregroundView.superview];
             CGFloat positionX = newCenter.x+translation.x;
             CGFloat offsetX = positionX - foregroundCenter.x;
-            if (offsetX > 50) {
-                positionX = 50+foregroundCenter.x;
-                animating = YES;
-				panStyle = PanStyle_Right;
-            }else if (offsetX < -50) {
-                positionX = -50+foregroundCenter.x;
-                animating = YES;
-				panStyle = PanStyle_Left;
+            
+            if ( offsetX >0 && offsetX < CELL_PAN_WIDTH) {
+                markView.alpha = beMarked ? 1.0f : offsetX/CELL_PAN_WIDTH;
+
+                panStyle = PanStyle_Right;
+            }else if (offsetX > CELL_PAN_WIDTH) {
+                positionX = CELL_PAN_WIDTH+foregroundCenter.x;
+				panStyle = PanStyle_RightToggle;
+            }else if (offsetX < 0 && offsetX > -CELL_PAN_WIDTH) {
+                clockView.alpha = beClocked ? 1.0f : offsetX/(-CELL_PAN_WIDTH);
+
+                panStyle = PanStyle_Left;
+            }else if (offsetX < -CELL_PAN_WIDTH) {
+                positionX = -CELL_PAN_WIDTH+foregroundCenter.x;
+				panStyle = PanStyle_LeftToggle;
             }
+            
+            animating = YES;
+
             [gesture setTranslation:CGPointMake(0, 0) inView:foregroundView.superview];
             foregroundView.center = CGPointMake(positionX, foregroundCenter.y);
             
@@ -94,12 +117,54 @@ typedef enum panStyle_e {
             }
             
             if (panStyle == PanStyle_Right) {
-
+                
                 [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
                 
                 [UIView animateWithDuration:0.5
                                  animations:^ {
-                                     foregroundView.center = CGPointMake(foregroundCenter.x - 10, foregroundCenter.y);
+                                     foregroundView.center = CGPointMake(foregroundCenter.x - 4, foregroundCenter.y);
+                                 }
+                                 completion:^(BOOL finished) {
+                                     [UIView animateWithDuration:0.2
+                                                      animations:^(){
+                                                          foregroundView.center = foregroundCenter;
+                                                          animating = NO;
+                                                      }
+                                      ];
+                                 }
+                 ];
+            }else if (panStyle == PanStyle_Left) {
+                
+                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+                
+                [UIView animateWithDuration:0.5
+                                 animations:^ {
+                                     foregroundView.center = CGPointMake(foregroundCenter.x + 4, foregroundCenter.y);
+                                 }
+                                 completion:^(BOOL finished) {
+                                     [UIView animateWithDuration:0.2
+                                                      animations:^(){
+                                                          foregroundView.center = foregroundCenter;
+                                                          animating = NO;
+                                                      }
+                                      ];
+                                     
+                                 }
+                 ];
+
+            }else if (panStyle == PanStyle_RightToggle) {
+				markView.alpha = 1.0f;
+                beMarked = !beMarked;
+                
+                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+                
+                [UIView animateWithDuration:0.5
+                                 animations:^ {
+                                     // toggle effect
+                                     // 1 scale large
+                                     // 2 fast scale orign
+                                     
+                                     foregroundView.center = CGPointMake(foregroundCenter.x - 4, foregroundCenter.y);
                                  }
                                  completion:^(BOOL finished) {
                                      [UIView animateWithDuration:0.2
@@ -111,13 +176,19 @@ typedef enum panStyle_e {
                                  }
                  ];
                 
-            }else {	// PanStyle_Left
-
+            }else {	// PanStyle_LeftToggle
+				clockView.alpha = 1.0f;
+                beClocked = !beClocked;
+                
                 [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
                 
                 [UIView animateWithDuration:0.5
                                  animations:^ {
-                                     foregroundView.center = CGPointMake(foregroundCenter.x + 10, foregroundCenter.y);
+                                     // toggle effect
+                                     // 1 scale large
+                                     // 2 fast scale orign
+
+                                     foregroundView.center = CGPointMake(foregroundCenter.x + 4, foregroundCenter.y);
                                  }
                                  completion:^(BOOL finished) {
                                      [UIView animateWithDuration:0.2
@@ -134,10 +205,10 @@ typedef enum panStyle_e {
 
         } break;
         case UIGestureRecognizerStateCancelled: {
-            
+
         } break;
         case UIGestureRecognizerStateFailed: {
-            
+
         } break;
     }
 
@@ -155,7 +226,7 @@ typedef enum panStyle_e {
     UIPanGestureRecognizer* gesturePan = (UIPanGestureRecognizer*)gestureRecognizer;
     CGPoint v = [gesturePan velocityInView:self.contentView];
 
-    if (fabs(v.x)<8.0f) {
+    if (fabs(v.x)<4.0f) {
         return NO;
     }else
         return YES;

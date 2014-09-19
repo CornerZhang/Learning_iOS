@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
 @property (strong, nonatomic) IBOutlet UIView *foregroundView;
 @property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UIImageView *markView;
+@property (strong, nonatomic) IBOutlet UIImageView *clockView;
 @property (assign, nonatomic) CGPoint foregroundCenter;
 @end
