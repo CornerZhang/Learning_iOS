@@ -14,15 +14,16 @@
 #define CELL_PAN_WIDTH 44
 
 typedef enum panStyle_e {
-    PanStyle_Left,
+    PanStyle_LeftCancel,
     PanStyle_LeftToggle,
-    PanStyle_Right,
+    PanStyle_RightCancel,
     PanStyle_RightToggle
 } panStyle_t;
 
 @interface NXTableViewCell () {
 	BOOL animating;
 	panStyle_t panStyle;
+    
     BOOL beMarked;
     BOOL beClocked;
 }
@@ -50,11 +51,11 @@ typedef enum panStyle_e {
         [self.contentView addGestureRecognizer:panGesture];
 
         animating = NO;
-        beMarked = NO;
-        beClocked = NO;
-        
         markView.alpha = 0;
         clockView.alpha = 0;
+        
+        beMarked = NO;
+        beClocked = NO;
     }
     return self;
 }
@@ -71,6 +72,25 @@ typedef enum panStyle_e {
     // Configure the view for the selected state
 }
 
+- (BOOL)markChecked {
+    return beMarked;
+}
+
+- (BOOL)clockChecked {
+    return beClocked;
+}
+
+- (void)markToggle {
+    beMarked = !beMarked;
+    // post notification...
+
+}
+
+- (void)clockToggle {
+    beClocked = !beClocked;
+    // remind clock is on/off...
+
+}
 
 - (void)didPanInCell:(UIPanGestureRecognizer*)gesture {
     
@@ -89,18 +109,18 @@ typedef enum panStyle_e {
             CGFloat offsetX = positionX - foregroundCenter.x;
             
             if ( offsetX >0 && offsetX < CELL_PAN_WIDTH) {
-                markView.alpha = beMarked ? 1.0f : offsetX/CELL_PAN_WIDTH;
+                markView.alpha = [self markChecked] ? 1.0f : offsetX/CELL_PAN_WIDTH;
 
-                panStyle = PanStyle_Right;
+                panStyle = PanStyle_RightCancel;
             }else if (offsetX > CELL_PAN_WIDTH) {
-                positionX = CELL_PAN_WIDTH+foregroundCenter.x;
+                positionX = CELL_PAN_WIDTH + foregroundCenter.x;
 				panStyle = PanStyle_RightToggle;
             }else if (offsetX < 0 && offsetX > -CELL_PAN_WIDTH) {
-                clockView.alpha = beClocked ? 1.0f : offsetX/(-CELL_PAN_WIDTH);
+                clockView.alpha = [self clockChecked] ? 1.0f : offsetX/(-CELL_PAN_WIDTH);
 
-                panStyle = PanStyle_Left;
+                panStyle = PanStyle_LeftCancel;
             }else if (offsetX < -CELL_PAN_WIDTH) {
-                positionX = -CELL_PAN_WIDTH+foregroundCenter.x;
+                positionX = -CELL_PAN_WIDTH + foregroundCenter.x;
 				panStyle = PanStyle_LeftToggle;
             }
             
@@ -116,91 +136,20 @@ typedef enum panStyle_e {
                 break;
             }
             
-            if (panStyle == PanStyle_Right) {
-                
-                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-                
-                [UIView animateWithDuration:0.5
-                                 animations:^ {
-                                     foregroundView.center = CGPointMake(foregroundCenter.x - 4, foregroundCenter.y);
-                                 }
-                                 completion:^(BOOL finished) {
-                                     [UIView animateWithDuration:0.2
-                                                      animations:^(){
-                                                          foregroundView.center = foregroundCenter;
-                                                          animating = NO;
-                                                      }
-                                      ];
-                                 }
-                 ];
-            }else if (panStyle == PanStyle_Left) {
-                
-                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-                
-                [UIView animateWithDuration:0.5
-                                 animations:^ {
-                                     foregroundView.center = CGPointMake(foregroundCenter.x + 4, foregroundCenter.y);
-                                 }
-                                 completion:^(BOOL finished) {
-                                     [UIView animateWithDuration:0.2
-                                                      animations:^(){
-                                                          foregroundView.center = foregroundCenter;
-                                                          animating = NO;
-                                                      }
-                                      ];
-                                     
-                                 }
-                 ];
-
+            if (panStyle == PanStyle_RightCancel) {
+                [self performCancelAnimation:foregroundCenter.x - 4];
+            }else if (panStyle == PanStyle_LeftCancel) {
+                [self performCancelAnimation:foregroundCenter.x + 4];
             }else if (panStyle == PanStyle_RightToggle) {
-				markView.alpha = 1.0f;
-                beMarked = !beMarked;
+                [self markToggle];
                 
-                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-                
-                [UIView animateWithDuration:0.5
-                                 animations:^ {
-                                     // toggle effect
-                                     // 1 scale large
-                                     // 2 fast scale orign
-                                     
-                                     foregroundView.center = CGPointMake(foregroundCenter.x - 4, foregroundCenter.y);
-                                 }
-                                 completion:^(BOOL finished) {
-                                     [UIView animateWithDuration:0.2
-                                                      animations:^(){
-                                                          foregroundView.center = foregroundCenter;
-                                                          animating = NO;
-                                                      }
-                                      ];
-                                 }
-                 ];
-                
+                markView.alpha = 1.0f;
+                [self performToggleAnimation:foregroundCenter.x - 4];
             }else {	// PanStyle_LeftToggle
-				clockView.alpha = 1.0f;
-                beClocked = !beClocked;
+                [self clockToggle];
                 
-                [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-                
-                [UIView animateWithDuration:0.5
-                                 animations:^ {
-                                     // toggle effect
-                                     // 1 scale large
-                                     // 2 fast scale orign
-
-                                     foregroundView.center = CGPointMake(foregroundCenter.x + 4, foregroundCenter.y);
-                                 }
-                                 completion:^(BOOL finished) {
-                                     [UIView animateWithDuration:0.2
-                                                      animations:^(){
-                                                          foregroundView.center = foregroundCenter;
-                                                          animating = NO;
-                                                      }
-                                      ];
-                                     
-                                 }
-                 ];
-                
+                clockView.alpha = 1.0f;
+                [self performToggleAnimation:foregroundCenter.x + 4];
             }
 
         } break;
@@ -212,6 +161,47 @@ typedef enum panStyle_e {
         } break;
     }
 
+}
+
+- (void)performCancelAnimation:(CGFloat)offsetOnEdge {
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    
+    [UIView animateWithDuration:0.5
+                     animations:^ {
+                         foregroundView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.2
+                                          animations:^(){
+                                              foregroundView.center = foregroundCenter;
+                                              animating = NO;
+                                          }
+                          ];
+                     }
+     ];
+
+}
+
+- (void)performToggleAnimation:(CGFloat)offsetOnEdge {
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    
+    [UIView animateWithDuration:0.5
+                     animations:^ {
+                         // toggle effect
+                         // 1 scale large
+                         // 2 fast scale orign
+                         
+                         foregroundView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.2
+                                          animations:^(){
+                                              foregroundView.center = foregroundCenter;
+                                              animating = NO;
+                                          }
+                          ];
+                     }
+     ];
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
