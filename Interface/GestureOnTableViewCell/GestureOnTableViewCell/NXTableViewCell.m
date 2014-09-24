@@ -27,12 +27,12 @@ typedef enum panStyle_e {
     BOOL beMarked;
     BOOL beClocked;
 }
-
+@property (strong, nonatomic) UIPanGestureRecognizer* panGesture;
 @end
 
 @implementation NXTableViewCell
-@synthesize foregroundView;
-@synthesize backgroundView;
+//@synthesize userBackgroundView;
+@synthesize panGesture;
 @synthesize markView;
 @synthesize clockView;
 @synthesize foregroundCenter;
@@ -41,7 +41,7 @@ typedef enum panStyle_e {
     self = [super initWithCoder:aDecoder];
     if (self) {
         
-        UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPanInCell:)];
+        panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPanInCell:)];
         panGesture.maximumNumberOfTouches = 1;
         panGesture.minimumNumberOfTouches = 1;
         panGesture.delaysTouchesBegan = NO;
@@ -51,11 +51,34 @@ typedef enum panStyle_e {
         [self.contentView addGestureRecognizer:panGesture];
 
         animating = NO;
+        
+        self.backgroundView = [[UIView alloc] initWithFrame:self.frame];
+        self.backgroundView.backgroundColor = [UIColor grayColor];
+//        [self.backgroundView addSubview:userBackgroundView];
+
+//        userBackgroundView = [[UIView alloc] initWithFrame:self.contentView.bounds];
+//        userBackgroundView.backgroundColor = [UIColor grayColor];
+        
+        markView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetHeight(self.frame), CGRectGetHeight(self.frame))];
+        [markView setImage:[UIImage imageNamed:@"Mark"]];
+        markView.contentMode = UIViewContentModeScaleToFill;
         markView.alpha = 0;
+        [self.backgroundView addSubview:markView];
+
+        clockView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.frame) - CGRectGetHeight(self.frame),
+                                                                  0,
+                                                                  CGRectGetHeight(self.frame),
+                                                                  CGRectGetHeight(self.frame))];
+        [clockView setImage:[UIImage imageNamed:@"Clock"]];
+        clockView.contentMode = UIViewContentModeScaleToFill;
         clockView.alpha = 0;
+        [self.backgroundView addSubview:clockView];
+        
         
         beMarked = NO;
         beClocked = NO;
+
+
     }
     return self;
 }
@@ -102,9 +125,9 @@ typedef enum panStyle_e {
         case UIGestureRecognizerStateBegan:
         case UIGestureRecognizerStateChanged: {
             
-            CGPoint newCenter = foregroundView.center;
+            CGPoint newCenter = self.contentView.center;
             
-            CGPoint translation = [gesture translationInView:foregroundView.superview];
+            CGPoint translation = [gesture translationInView:self.contentView.superview];
             CGFloat positionX = newCenter.x+translation.x;
             CGFloat offsetX = positionX - foregroundCenter.x;
             
@@ -126,8 +149,8 @@ typedef enum panStyle_e {
             
             animating = YES;
 
-            [gesture setTranslation:CGPointMake(0, 0) inView:foregroundView.superview];
-            foregroundView.center = CGPointMake(positionX, foregroundCenter.y);
+            [gesture setTranslation:CGPointMake(0, 0) inView:self.contentView.superview];
+            self.contentView.center = CGPointMake(positionX, foregroundCenter.y);
             
         } break;
         case UIGestureRecognizerStateEnded: {
@@ -168,12 +191,12 @@ typedef enum panStyle_e {
     
     [UIView animateWithDuration:0.5
                      animations:^ {
-                         foregroundView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
+                         self.contentView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
                      }
                      completion:^(BOOL finished) {
                          [UIView animateWithDuration:0.2
                                           animations:^(){
-                                              foregroundView.center = foregroundCenter;
+                                              self.contentView.center = foregroundCenter;
                                               animating = NO;
                                           }
                           ];
@@ -191,12 +214,12 @@ typedef enum panStyle_e {
                          // 1 scale large
                          // 2 fast scale orign
                          
-                         foregroundView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
+                         self.contentView.center = CGPointMake(offsetOnEdge, foregroundCenter.y);
                      }
                      completion:^(BOOL finished) {
                          [UIView animateWithDuration:0.2
                                           animations:^(){
-                                              foregroundView.center = foregroundCenter;
+                                              self.contentView.center = foregroundCenter;
                                               animating = NO;
                                           }
                           ];
@@ -213,14 +236,31 @@ typedef enum panStyle_e {
         return NO;
     }
     
-    UIPanGestureRecognizer* gesturePan = (UIPanGestureRecognizer*)gestureRecognizer;
-    CGPoint v = [gesturePan velocityInView:self.contentView];
+//    UIPanGestureRecognizer* gesturePan = (UIPanGestureRecognizer*)gestureRecognizer;
+//    CGPoint v = [gesturePan velocityInView:self.contentView];
+//
+//    if (fabs(v.x)<4.0f) {
+//        return NO;
+//    }else
+//        return YES;
 
-    if (fabs(v.x)<4.0f) {
-        return NO;
-    }else
+//    if (gestureRecognizer == panGesture) {
+//        UIScrollView* superView = (UIScrollView*)self.superview;
+//        CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:superView];
+//        return ((fabs(translation.x) / fabs(translation.y) > 1) ? YES : NO && (superView.contentOffset.y == 0.0 && superView.contentOffset.x == 0.0));
+//    }
+    
+    //    return NO;
+    
+    UIView *cell = [gestureRecognizer view];
+    CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:[cell superview]];
+    
+    // Check for horizontal gesture
+    if (fabsf(translation.x) > fabsf(translation.y))
+    {
         return YES;
-
+    }
+    return NO;
 }
 
 @end

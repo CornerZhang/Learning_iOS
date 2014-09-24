@@ -28,36 +28,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X0E-Yu-BfI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mark" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-WD-Stb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="jb6-qk-7as">
-                                                            <rect key="frame" x="277" y="0.0" width="43" height="43"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.79125478316326525" green="0.79125478316326525" blue="0.79125478316326525" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-Y7-OCR">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-XM-w8K">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIu-Gq-m34">
-                                                            <rect key="frame" x="20" y="11" width="84" height="21"/>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIu-Gq-m34">
+                                                            <rect key="frame" x="8" y="11" width="84" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="IIu-Gq-m34" firstAttribute="leading" secondItem="qRU-XM-w8K" secondAttribute="leading" constant="8" id="3tL-17-rkb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IIu-Gq-m34" secondAttribute="trailing" constant="228" id="8iS-fa-AM8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="IIu-Gq-m34" secondAttribute="bottom" constant="12" id="SB4-xi-00f"/>
+                                                        <constraint firstItem="IIu-Gq-m34" firstAttribute="top" secondItem="qRU-XM-w8K" secondAttribute="top" constant="11" id="keH-os-zVB"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qRU-XM-w8K" firstAttribute="top" secondItem="mC8-6Y-b2s" secondAttribute="top" id="Lu2-Kj-S56"/>
+                                                <constraint firstAttribute="trailing" secondItem="qRU-XM-w8K" secondAttribute="trailing" id="SSf-We-JZ9"/>
+                                                <constraint firstItem="qRU-XM-w8K" firstAttribute="leading" secondItem="mC8-6Y-b2s" secondAttribute="leading" id="Vx9-WL-6FI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="backgroundView" destination="X0E-Yu-BfI" id="HRr-Jf-tDN"/>
-                                            <outlet property="clockView" destination="jb6-qk-7as" id="WDa-rw-PIk"/>
-                                            <outlet property="foregroundView" destination="jm9-Y7-OCR" id="576-1W-3FA"/>
-                                            <outlet property="markView" destination="DcQ-WD-Stb" id="Yht-Z2-V03"/>
                                             <outlet property="title" destination="IIu-Gq-m34" id="Ygy-ge-JFO"/>
                                         </connections>
                                     </tableViewCell>
@@ -70,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fP-en-nB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="155"/>
+            <point key="canvasLocation" x="562" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wow-cZ-1d7">
@@ -91,10 +86,6 @@
             <point key="canvasLocation" x="83" y="155"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Clock" width="44" height="44"/>
-        <image name="Mark" width="44" height="44"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

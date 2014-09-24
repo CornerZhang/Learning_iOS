@@ -45,7 +45,7 @@
     newCell = [tableView dequeueReusableCellWithIdentifier:@"DemoCell" forIndexPath:indexPath];
     
 	newCell.title.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
-    newCell.foregroundCenter = newCell.foregroundView.center;
+    newCell.foregroundCenter = newCell.contentView.center;
     
     return newCell;
 }
