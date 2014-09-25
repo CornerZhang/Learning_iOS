@@ -236,31 +236,14 @@ typedef enum panStyle_e {
         return NO;
     }
     
-//    UIPanGestureRecognizer* gesturePan = (UIPanGestureRecognizer*)gestureRecognizer;
-//    CGPoint v = [gesturePan velocityInView:self.contentView];
-//
-//    if (fabs(v.x)<4.0f) {
-//        return NO;
-//    }else
-//        return YES;
+    UIPanGestureRecognizer* gesturePan = (UIPanGestureRecognizer*)gestureRecognizer;
+    CGPoint v = [gesturePan velocityInView:self.contentView];
 
-//    if (gestureRecognizer == panGesture) {
-//        UIScrollView* superView = (UIScrollView*)self.superview;
-//        CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:superView];
-//        return ((fabs(translation.x) / fabs(translation.y) > 1) ? YES : NO && (superView.contentOffset.y == 0.0 && superView.contentOffset.x == 0.0));
-//    }
-    
-    //    return NO;
-    
-    UIView *cell = [gestureRecognizer view];
-    CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:[cell superview]];
-    
-    // Check for horizontal gesture
-    if (fabsf(translation.x) > fabsf(translation.y))
-    {
+    if (fabs(v.x)<4.0f) {
+        return NO;
+    }else
         return YES;
-    }
-    return NO;
+
 }
 
 @end
