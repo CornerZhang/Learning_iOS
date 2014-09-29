@@ -34,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65F5C97A19D9971A005592C1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		65F5C97B19D9971A005592C1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		65F5C97F19D99795005592C1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		65F613FB199DA8930056EAC7 /* CalendarEventReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarEventReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F613FE199DA8930056EAC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65F61400199DA8930056EAC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -44,7 +47,6 @@
 		65F6140C199DA8930056EAC7 /* CalendarEventReminder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalendarEventReminder-Prefix.pch"; sourceTree = "<group>"; };
 		65F6140D199DA8930056EAC7 /* NXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXAppDelegate.h; sourceTree = "<group>"; };
 		65F6140E199DA8930056EAC7 /* NXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXAppDelegate.m; sourceTree = "<group>"; };
-		65F61411199DA8930056EAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65F61413199DA8930056EAC7 /* NXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXViewController.h; sourceTree = "<group>"; };
 		65F61414199DA8930056EAC7 /* NXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXViewController.m; sourceTree = "<group>"; };
 		65F61416199DA8930056EAC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 65F613F2199DA8930056EAC7;
 			productRefGroup = 65F613FC199DA8930056EAC7 /* Products */;
@@ -279,6 +282,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				65F61408199DA8930056EAC7 /* en */,
+				65F5C97A19D9971A005592C1 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -286,7 +290,7 @@
 		65F61410199DA8930056EAC7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65F61411199DA8930056EAC7 /* Base */,
+				65F5C97F19D99795005592C1 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -295,6 +299,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				65F61427199DA8930056EAC7 /* en */,
+				65F5C97B19D9971A005592C1 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				65F6142F199DA8930056EAC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65F61430199DA8930056EAC7 /* Build configuration list for PBXNativeTarget "CalendarEventReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +471,7 @@
 				65F61432199DA8930056EAC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

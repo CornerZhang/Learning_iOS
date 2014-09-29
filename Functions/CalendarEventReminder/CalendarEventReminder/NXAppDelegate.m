@@ -13,6 +13,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSTimeZone* timeZone = [NSTimeZone defaultTimeZone];
+    NSLog(@"timeZone name: %@", timeZone.name);
+    
+    NSCalendar* currentCalendar = [NSCalendar currentCalendar];
+    NSTimeZone* defaultCalendarTimeZone = [currentCalendar timeZone];
+    NSLog(@"currentCalendar id: %@", currentCalendar.calendarIdentifier);
+    NSLog(@"defaultCalendarTimeZone name: %@", defaultCalendarTimeZone.name);
+
+    
     return YES;
 }
 							
