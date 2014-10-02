@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TableView_advanced/TableView_advanced.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UITextField_demo/UITextField_demo.xcodeproj">
    </FileRef>
    <FileRef
