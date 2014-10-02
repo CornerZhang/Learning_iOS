@@ -72,15 +72,19 @@
 }
 
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//	return
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NXTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    NSString* cellTitle = [data objectAtIndex:indexPath.row];
+    NSDictionary* cellData = [data objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = cellTitle;
-
+    cell.title.text = [cellData objectForKey:@"name"];
+	cell.detail.text = [cellData objectForKey:@"description"];
+    
     [swipeLeftGestureRecognizer addTarget:cell action:@selector(handleLeftSwipe:)];
     [swipeRightGestureRecognizer addTarget:cell action:@selector(handleRightSwipe:)];
     

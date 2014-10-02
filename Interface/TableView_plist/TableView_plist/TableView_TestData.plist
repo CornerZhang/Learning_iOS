@@ -2,8 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>上海</string>
-	<string>北京</string>
-	<string>广州</string>
+	<dict>
+		<key>name</key>
+		<string>起床</string>
+		<key>description</key>
+		<string>上海　2014年9月16日</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>午休</string>
+		<key>description</key>
+		<string>上海　每天　12:30分</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>接孩子</string>
+		<key>description</key>
+		<string>上海　工作日　16:30分</string>
+	</dict>
 </array>
 </plist>

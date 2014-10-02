@@ -8,7 +8,12 @@
 
 #import "NXTableViewCell.h"
 
+
+
 @implementation NXTableViewCell
+@synthesize title;
+@synthesize detail;
+
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
