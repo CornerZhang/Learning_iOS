@@ -7,18 +7,24 @@
 		<string>起床</string>
 		<key>description</key>
 		<string>上海　2014年9月16日</string>
+		<key>showDescription</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>午休</string>
 		<key>description</key>
 		<string>上海　每天　12:30分</string>
+		<key>showDescription</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>接孩子</string>
 		<key>description</key>
 		<string>上海　工作日　16:30分</string>
+		<key>showDescription</key>
+		<true/>
 	</dict>
 </array>
 </plist>

@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NXDynamicTableViewController : UITableViewController
-@property (nonatomic, strong) UISwipeGestureRecognizer* swipeLeftGestureRecognizer;
-@property (nonatomic, strong) UISwipeGestureRecognizer* swipeRightGestureRecognizer;
 
-@property (nonatomic, strong) NSArray*					data;
+
+@property (nonatomic, strong) NSMutableArray*					data;
 @end

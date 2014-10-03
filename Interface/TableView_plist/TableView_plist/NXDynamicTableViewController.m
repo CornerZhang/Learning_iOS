@@ -14,8 +14,7 @@
 @end
 
 @implementation NXDynamicTableViewController
-@synthesize swipeLeftGestureRecognizer;
-@synthesize swipeRightGestureRecognizer;
+
 @synthesize data;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,19 +37,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 	NSString * path = [[NSBundle mainBundle] pathForResource:@"TableView_TestData" ofType:@"plist"];
-    data = [NSArray arrayWithContentsOfFile:path];
+    data = [NSMutableArray arrayWithContentsOfFile:path];
     
-    swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] init];
-    swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] init];
-    
-    swipeLeftGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    swipeLeftGestureRecognizer.numberOfTouchesRequired = 1;
-
-    swipeRightGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    swipeRightGestureRecognizer.numberOfTouchesRequired = 1;
-
-    [self.tableView addGestureRecognizer:swipeLeftGestureRecognizer];
-    [self.tableView addGestureRecognizer:swipeRightGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,64 +59,32 @@
     return [data count];
 }
 
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//	return
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+#if DEBUG
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+#endif
+    
+    NSMutableDictionary* cellData = [data objectAtIndex:indexPath.row];
+    NSNumber* show = [cellData objectForKey:@"showDescription"];
+    
+	return [NXTableViewCell heightForCell:[show boolValue]];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#if DEBUG
+    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+#endif
+    
     NXTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.controller = self;
+    cell.indexPath = indexPath;
     
-    NSDictionary* cellData = [data objectAtIndex:indexPath.row];
-
-    cell.title.text = [cellData objectForKey:@"name"];
-	cell.detail.text = [cellData objectForKey:@"description"];
-    
-    [swipeLeftGestureRecognizer addTarget:cell action:@selector(handleLeftSwipe:)];
-    [swipeRightGestureRecognizer addTarget:cell action:@selector(handleRightSwipe:)];
+    NSMutableDictionary* cellData = [data objectAtIndex:indexPath.row];
+    [cell loadData:cellData];
     
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
