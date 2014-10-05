@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>195DF9A5-96F2-4934-8337-D00AB91CB11F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PagedUITestApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BE1D8715-F531-4A22-AFC7-A10E01183C9B</key>
+		<string>https://github.com/CornerZhang/Learning_iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Interface/PagedUITestApp/PagedUITestApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BE1D8715-F531-4A22-AFC7-A10E01183C9B</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CornerZhang/Learning_iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BE1D8715-F531-4A22-AFC7-A10E01183C9B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BE1D8715-F531-4A22-AFC7-A10E01183C9B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Learning_iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

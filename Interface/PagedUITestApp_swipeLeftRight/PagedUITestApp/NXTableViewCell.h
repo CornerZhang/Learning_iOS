@@ -1,8 +1,8 @@
 //
 //  NXTableViewCell.h
-//  GestureOnTableViewCell
+//  PagedUITestApp
 //
-//  Created by CornerZhang on 14-9-15.
+//  Created by CornerZhang on 14-10-5.
 //  Copyright (c) 2014年 NeXtreme.com. All rights reserved.
 //
 
@@ -10,8 +10,9 @@
 
 @interface NXTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *title;
-//@property (strong, nonatomic) UIView *userBackgroundView;
+
 @property (strong, nonatomic) UIImageView *markView;
 @property (strong, nonatomic) UIImageView *clockView;
 @property (assign, nonatomic) CGPoint foregroundCenter;
+
 @end
