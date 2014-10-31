@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>order</key>
+		<integer>2</integer>
+		<key>completed</key>
+		<true/>
+		<key>name</key>
+		<string>Shanghai</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>1</integer>
+		<key>completed</key>
+		<false/>
+		<key>name</key>
+		<string>GuangZhou</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>0</integer>
+		<key>completed</key>
+		<true/>
+		<key>name</key>
+		<string>XinJiang</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>3</integer>
+		<key>completed</key>
+		<false/>
+		<key>name</key>
+		<string>Beijing</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>1</integer>
+		<key>completed</key>
+		<false/>
+		<key>name</key>
+		<string>CaiYuan</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>1</integer>
+		<key>completed</key>
+		<true/>
+		<key>name</key>
+		<string>NanJing</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>2</integer>
+		<key>completed</key>
+		<false/>
+		<key>name</key>
+		<string>XinAn</string>
+	</dict>
+</array>
+</plist>
