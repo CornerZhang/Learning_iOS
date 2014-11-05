@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6509CC6C1A0A03CA00313803 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509CC6B1A0A03CA00313803 /* main.m */; };
+		6509CC6F1A0A03CA00313803 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509CC6E1A0A03CA00313803 /* AppDelegate.m */; };
+		6509CC751A0A03CA00313803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6509CC731A0A03CA00313803 /* Main.storyboard */; };
+		6509CC771A0A03CA00313803 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6509CC761A0A03CA00313803 /* Images.xcassets */; };
+		6509CC7A1A0A03CA00313803 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6509CC781A0A03CA00313803 /* LaunchScreen.xib */; };
+		6509CC861A0A03CA00313803 /* TableViewCell_dynamicHeightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509CC851A0A03CA00313803 /* TableViewCell_dynamicHeightTests.m */; };
+		6509CC911A0A04A000313803 /* NXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509CC901A0A04A000313803 /* NXTableViewController.m */; };
+		6509CC941A0A056500313803 /* NXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509CC931A0A056500313803 /* NXTableViewCell.m */; };
+		6509CC961A0A062E00313803 /* demoData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6509CC951A0A062E00313803 /* demoData.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6509CC801A0A03CA00313803 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6509CC5E1A0A03C900313803 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6509CC651A0A03C900313803;
+			remoteInfo = TableViewCell_dynamicHeight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6509CC661A0A03C900313803 /* TableViewCell_dynamicHeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCell_dynamicHeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6509CC6A1A0A03CA00313803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6509CC6B1A0A03CA00313803 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6509CC6D1A0A03CA00313803 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6509CC6E1A0A03CA00313803 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6509CC741A0A03CA00313803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6509CC761A0A03CA00313803 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6509CC791A0A03CA00313803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6509CC7F1A0A03CA00313803 /* TableViewCell_dynamicHeightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewCell_dynamicHeightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6509CC841A0A03CA00313803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6509CC851A0A03CA00313803 /* TableViewCell_dynamicHeightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell_dynamicHeightTests.m; sourceTree = "<group>"; };
+		6509CC8F1A0A04A000313803 /* NXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTableViewController.h; sourceTree = "<group>"; };
+		6509CC901A0A04A000313803 /* NXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXTableViewController.m; sourceTree = "<group>"; };
+		6509CC921A0A056500313803 /* NXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTableViewCell.h; sourceTree = "<group>"; };
+		6509CC931A0A056500313803 /* NXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXTableViewCell.m; sourceTree = "<group>"; };
+		6509CC951A0A062E00313803 /* demoData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demoData.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6509CC631A0A03C900313803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6509CC7C1A0A03CA00313803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6509CC5D1A0A03C900313803 = {
+			isa = PBXGroup;
+			children = (
+				6509CC681A0A03C900313803 /* TableViewCell_dynamicHeight */,
+				6509CC821A0A03CA00313803 /* TableViewCell_dynamicHeightTests */,
+				6509CC671A0A03C900313803 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6509CC671A0A03C900313803 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6509CC661A0A03C900313803 /* TableViewCell_dynamicHeight.app */,
+				6509CC7F1A0A03CA00313803 /* TableViewCell_dynamicHeightTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6509CC681A0A03C900313803 /* TableViewCell_dynamicHeight */ = {
+			isa = PBXGroup;
+			children = (
+				6509CC6D1A0A03CA00313803 /* AppDelegate.h */,
+				6509CC6E1A0A03CA00313803 /* AppDelegate.m */,
+				6509CC921A0A056500313803 /* NXTableViewCell.h */,
+				6509CC931A0A056500313803 /* NXTableViewCell.m */,
+				6509CC8F1A0A04A000313803 /* NXTableViewController.h */,
+				6509CC901A0A04A000313803 /* NXTableViewController.m */,
+				6509CC731A0A03CA00313803 /* Main.storyboard */,
+				6509CC761A0A03CA00313803 /* Images.xcassets */,
+				6509CC781A0A03CA00313803 /* LaunchScreen.xib */,
+				6509CC691A0A03C900313803 /* Supporting Files */,
+			);
+			path = TableViewCell_dynamicHeight;
+			sourceTree = "<group>";
+		};
+		6509CC691A0A03C900313803 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6509CC6A1A0A03CA00313803 /* Info.plist */,
+				6509CC6B1A0A03CA00313803 /* main.m */,
+				6509CC951A0A062E00313803 /* demoData.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6509CC821A0A03CA00313803 /* TableViewCell_dynamicHeightTests */ = {
+			isa = PBXGroup;
+			children = (
+				6509CC851A0A03CA00313803 /* TableViewCell_dynamicHeightTests.m */,
+				6509CC831A0A03CA00313803 /* Supporting Files */,
+			);
+			path = TableViewCell_dynamicHeightTests;
+			sourceTree = "<group>";
+		};
+		6509CC831A0A03CA00313803 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6509CC841A0A03CA00313803 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6509CC651A0A03C900313803 /* TableViewCell_dynamicHeight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6509CC891A0A03CA00313803 /* Build configuration list for PBXNativeTarget "TableViewCell_dynamicHeight" */;
+			buildPhases = (
+				6509CC621A0A03C900313803 /* Sources */,
+				6509CC631A0A03C900313803 /* Frameworks */,
+				6509CC641A0A03C900313803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewCell_dynamicHeight;
+			productName = TableViewCell_dynamicHeight;
+			productReference = 6509CC661A0A03C900313803 /* TableViewCell_dynamicHeight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6509CC7E1A0A03CA00313803 /* TableViewCell_dynamicHeightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6509CC8C1A0A03CA00313803 /* Build configuration list for PBXNativeTarget "TableViewCell_dynamicHeightTests" */;
+			buildPhases = (
+				6509CC7B1A0A03CA00313803 /* Sources */,
+				6509CC7C1A0A03CA00313803 /* Frameworks */,
+				6509CC7D1A0A03CA00313803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6509CC811A0A03CA00313803 /* PBXTargetDependency */,
+			);
+			name = TableViewCell_dynamicHeightTests;
+			productName = TableViewCell_dynamicHeightTests;
+			productReference = 6509CC7F1A0A03CA00313803 /* TableViewCell_dynamicHeightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6509CC5E1A0A03C900313803 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = NeXtreme.com;
+				TargetAttributes = {
+					6509CC651A0A03C900313803 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6509CC7E1A0A03CA00313803 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 6509CC651A0A03C900313803;
+					};
+				};
+			};
+			buildConfigurationList = 6509CC611A0A03C900313803 /* Build configuration list for PBXProject "TableViewCell_dynamicHeight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6509CC5D1A0A03C900313803;
+			productRefGroup = 6509CC671A0A03C900313803 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6509CC651A0A03C900313803 /* TableViewCell_dynamicHeight */,
+				6509CC7E1A0A03CA00313803 /* TableViewCell_dynamicHeightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6509CC641A0A03C900313803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6509CC751A0A03CA00313803 /* Main.storyboard in Resources */,
+				6509CC7A1A0A03CA00313803 /* LaunchScreen.xib in Resources */,
+				6509CC771A0A03CA00313803 /* Images.xcassets in Resources */,
+				6509CC961A0A062E00313803 /* demoData.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6509CC7D1A0A03CA00313803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6509CC621A0A03C900313803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6509CC911A0A04A000313803 /* NXTableViewController.m in Sources */,
+				6509CC941A0A056500313803 /* NXTableViewCell.m in Sources */,
+				6509CC6F1A0A03CA00313803 /* AppDelegate.m in Sources */,
+				6509CC6C1A0A03CA00313803 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6509CC7B1A0A03CA00313803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6509CC861A0A03CA00313803 /* TableViewCell_dynamicHeightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6509CC811A0A03CA00313803 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6509CC651A0A03C900313803 /* TableViewCell_dynamicHeight */;
+			targetProxy = 6509CC801A0A03CA00313803 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6509CC731A0A03CA00313803 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6509CC741A0A03CA00313803 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6509CC781A0A03CA00313803 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6509CC791A0A03CA00313803 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6509CC871A0A03CA00313803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6509CC881A0A03CA00313803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6509CC8A1A0A03CA00313803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TableViewCell_dynamicHeight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6509CC8B1A0A03CA00313803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TableViewCell_dynamicHeight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6509CC8D1A0A03CA00313803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TableViewCell_dynamicHeightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewCell_dynamicHeight.app/TableViewCell_dynamicHeight";
+			};
+			name = Debug;
+		};
+		6509CC8E1A0A03CA00313803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TableViewCell_dynamicHeightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewCell_dynamicHeight.app/TableViewCell_dynamicHeight";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6509CC611A0A03C900313803 /* Build configuration list for PBXProject "TableViewCell_dynamicHeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6509CC871A0A03CA00313803 /* Debug */,
+				6509CC881A0A03CA00313803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6509CC891A0A03CA00313803 /* Build configuration list for PBXNativeTarget "TableViewCell_dynamicHeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6509CC8A1A0A03CA00313803 /* Debug */,
+				6509CC8B1A0A03CA00313803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6509CC8C1A0A03CA00313803 /* Build configuration list for PBXNativeTarget "TableViewCell_dynamicHeightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6509CC8D1A0A03CA00313803 /* Debug */,
+				6509CC8E1A0A03CA00313803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6509CC5E1A0A03C900313803 /* Project object */;
+}
