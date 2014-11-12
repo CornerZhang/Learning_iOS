@@ -77,6 +77,8 @@ static NXTableViewController* only = nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"row: %d", indexPath.row);
+    
     NSDictionary* cellData = [data objectAtIndex:indexPath.row];
     NSNumber* bigger = [cellData objectForKey:@"bigger"];
     return [bigger boolValue] ? 132 : 88;
