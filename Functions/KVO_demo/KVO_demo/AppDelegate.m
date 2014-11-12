@@ -29,6 +29,13 @@
     // KVC array
     NSArray* names = [self.watcher valueForKeyPath:@"array.name"];
     NSLog(@"%@", names);
+    NSNumber* count = [self.watcher valueForKeyPath:@"array.@count"];
+    NSArray* ages = [self.watcher valueForKeyPath:@"array.age"];
+    count = [ages valueForKeyPath:@"@count"];
+    NSNumber* sum = [self.watcher valueForKeyPath:@"array.@sum.age"];
+    NSNumber* avg = [self.watcher valueForKeyPath:@"array.@avg.age"];
+    NSNumber* max = [self.watcher valueForKeyPath:@"array.@max.age"];
+    NSNumber* min = [self.watcher valueForKeyPath:@"array.@min.age"];
     
     // 为@property state的改变绑定一个observing 对象self.watcher
     [self addObserver:self.watcher

@@ -7,12 +7,16 @@
 		<string>zhanghua</string>
 		<key>description</key>
 		<string>shanghai ning</string>
+		<key>age</key>
+		<integer>35</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>fengzhe</string>
 		<key>description</key>
 		<string>HeNan ning</string>
+		<key>age</key>
+		<integer>32</integer>
 	</dict>
 </array>
 </plist>
