@@ -14,7 +14,7 @@
 		<string>https://github.com/CornerZhang/Learning_iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Interface/UITextField_demo/UITextField_demo.xcodeproj/project.xcworkspace</string>
+	<string>Interface/UITextField_demo/UITextField_demo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A44C2AD4BCE5830A1AF143645142487E5D732DFB</key>

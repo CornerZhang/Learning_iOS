@@ -24,14 +24,16 @@
         
         data = [sourceData sortedArrayUsingComparator:^(NSMutableDictionary* obj1, NSMutableDictionary* obj2)
          {
-             NSNumber* n1 = [obj1 objectForKey:@"order"];
-             NSNumber* n2 = [obj2 objectForKey:@"order"];
+             NSNumber* b1 = [obj1 objectForKey:@"completed"];
+             NSNumber* b2 = [obj2 objectForKey:@"completed"];
+
              
-             NSComparisonResult result = [n1 compare:n2];
+             NSComparisonResult result = [b1 compare: b2];
              if (result == NSOrderedSame) {
-                 NSNumber* b1 = [obj1 objectForKey:@"completed"];
-                 NSNumber* b2 = [obj2 objectForKey:@"completed"];
-                 return ([b1 boolValue] < [b2 boolValue]) ? NSOrderedAscending : NSOrderedDescending;
+                 NSNumber* n1 = [obj1 objectForKey:@"order"];
+                 NSNumber* n2 = [obj2 objectForKey:@"order"];
+
+                 return [n1 compare:n2];
              }
              return result;
          }
